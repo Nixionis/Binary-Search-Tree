@@ -9,7 +9,6 @@ Project that allows to create and work with Binary Search Tree in JavaScript.
 const tree = newBST();
 
 // Build tree from the array of values (sorts array with merge sort without duplicates)
-
 const rootNode = tree.buildTree(array);
 
 // Insert value in the tree

@@ -1,114 +1,53 @@
-# linked list
+# Binary Search Tree
 
-Project that allows to create and work with linked list in JavaScript.
+Project that allows to create and work with Binary Search Tree in JavaScript.
 
 ### Functions
 
-New list creation
-
 ```js
-const list = newLinkedList();
+// New tree creation
+const tree = newBST();
+
+// Build tree from the array of values (sorts array with merge sort without duplicates)
+
+const rootNode = tree.buildTree(array);
+
+// Insert value in the tree
+tree.insert(value);
+
+// Remove value from the tree
+tree.remove(value);
+
+// Find value in the tree and get node with that value
+const node = tree.find(value);
+
+// Go through tree with Bread-first search using iteration and call callback on each node or return array of values if callback was not provided
+tree.levelOrderIter(callback);
+
+// Go through tree with Bread-first search using recursion and call callback on each node or return array of values if callback was not provided
+tree.levelOrderRec(callback);
+
+// Go through tree with Depth-first search in DLR order and call callback on each node or return array of values if callback was not provided
+tree.preOrder(callback);
+
+// Go through tree with Depth-first search in LDR order and call callback on each node or return array of values if callback was not provided
+tree.inOrder(callback);
+
+// Go through tree with Depth-first search in LRD order and call callback on each node or return array of values if callback was not provided
+tree.postOrder(callback);
+
+// Get height of the node in the tree
+tree.height(node);
+
+// Get depth of the node in the tree
+tree.depth(node);
+
+// Check if tree is balanced
+tree.isBalanced();
+
+// Rebalance tree (get tree values, sort them and build a new tree)
+rootNode = tree.rebalance();
+
+// Print tree in the console with nodes and edges
+prettyPrint(rootNode);
 ```
-
-Add item to the end of the list
-
-```js
-list.append(value);
-```
-
-Add item to the start of the list
-
-```js
-list.prepend(value);
-```
-
-Get the size of the list
-
-```js
-list.size;
-```
-
-Get the head item of the list
-
-```js
-list.head;
-```
-
-Get the tail item of the list
-
-```js
-list.tail;
-```
-
-Get an item index in the list
-
-```js
-list.at(index);
-```
-
-Pop an item from the list
-
-```js
-list.pop();
-```
-
-Check if an item in the list
-
-```js
-list.contains(value);
-```
-
-Check if an item in the list
-
-```js
-list.contains(value);
-```
-
-Find an item in the list
-
-```js
-list.find(value);
-```
-
-Convert list to string
-
-```js
-list.toString;
-```
-
-Convert list to string
-
-```js
-list.toString;
-```
-
-Insert item at index in the list
-
-```js
-list.insertAt(value, index);
-```
-
-Remove item at index in the list
-
-```js
-list.removeAt(index);
-```
-
-### Usage
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Nixionis/linked-list.git
-   ```
-2. Install NPM packages (jest for testing purposes)
-   ```sh
-   npm install
-   ```
-3. Test linked list
-   ```sh
-   npm test
-   ```
-4. Import linked list module
-   ```js
-   const newLinkedList = require("./index");
-   ```
